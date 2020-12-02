@@ -80,7 +80,7 @@ class ItemAdapter(private val listItem: ArrayList<Barang>, val mCtx: Context) :
 
             Toast.makeText(mCtx, "Data berhasil di update", Toast.LENGTH_SHORT).show()
         }
-        builder.setNegativeButton("No") { p0, p1 ->
+        builder.setNegativeButton("Cancel") { p0, p1 ->
 
         }
         val alert: AlertDialog = builder.create()

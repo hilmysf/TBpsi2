@@ -18,7 +18,7 @@ class LihatDataActivity : AppCompatActivity() {
         setContentView(R.layout.activity_lihat_data)
         supportActionBar?.setDisplayShowHomeEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Your Data"
+        supportActionBar?.title = "Data Saya"
         firebaseRef = FirebaseDatabase.getInstance().getReference("barang")
         rvUser = findViewById(R.id.rv_user)
         rvUser.setHasFixedSize(true)

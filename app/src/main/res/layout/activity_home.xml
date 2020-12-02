@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_hapus_data"
+        android:layout_width="155dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:background="#3A506B"
+        android:text="HAPUS DATA"
+        android:textColor="#5BC0BE"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_tambah_data" />
+
+    <Button
+        android:id="@+id/btn_update_data"
+        android:layout_width="155dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:background="#3A506B"
+        android:text="UPDATE DATA"
+        android:textColor="#5BC0BE"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_hapus_data" />
+
+    <TextView
+        android:id="@+id/tv_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="39dp"
+        android:fontFamily="monospace"
+        android:text="mWarehouse"
+        android:textColor="#3A506B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_rumah"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_rumah"
+        android:layout_width="59dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_house_24" />
+
+    <Button
+        android:id="@+id/btn_data_saya"
+        android:layout_width="152dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="136dp"
+        android:background="#3A506B"
+        android:fontFamily="sans-serif-medium"
+        android:text="DATA SAYA"
+        android:textColor="#5BC0BE"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_home" />
+
+    <Button
+        android:id="@+id/btn_tambah_data"
+        android:layout_width="155dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:background="#3A506B"
+        android:text="TAMBAH DATA"
+        android:textColor="#5BC0BE"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_data_saya" />
+</androidx.constraintlayout.widget.ConstraintLayout>

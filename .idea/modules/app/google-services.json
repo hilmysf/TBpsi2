@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "993620962724",
+    "firebase_url": "https://tbpsi-df041.firebaseio.com",
+    "project_id": "tbpsi-df041",
+    "storage_bucket": "tbpsi-df041.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993620962724:android:addf8935044c6cd04fa531",
+        "android_client_info": {
+          "package_name": "com.example.tbpsi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993620962724-6n1c1fltea26crg2asjk0f4dqvo2qlml.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tbpsi",
+            "certificate_hash": "bf50418f15bc5c0da97704bd4296bd63115502c4"
+          }
+        },
+        {
+          "client_id": "993620962724-q0l6fd37eq5ur8khhl57lou6lh5trrca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiBD8yi7FmvAeKVQDVyNpKNSyYYaYc6vo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993620962724-q0l6fd37eq5ur8khhl57lou6lh5trrca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

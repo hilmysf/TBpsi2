@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/img_item"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/baju" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/img_item"
+            android:text="Nama Item"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@id/img_item"
+            android:text="Brand Item"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_stok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_brand"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@id/img_item"
+            android:text="Jumlah Stock"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ib_delete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+        <ImageView
+            android:id="@+id/ib_edit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@id/ib_delete"
+            app:srcCompat="@drawable/ic_baseline_edit_24"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

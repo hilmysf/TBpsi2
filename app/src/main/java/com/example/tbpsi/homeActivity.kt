@@ -17,26 +17,18 @@ class homeActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         supportActionBar?.title = "mWareHouse"
-        btn_data_saya.setOnClickListener(this)
-        btn_tambah_data.setOnClickListener(this)
+        LL_btn_data_saya.setOnClickListener(this)
+        LL_btn_tambah_data.setOnClickListener(this)
 
     }
 
     override fun onClick(v: View?) {
 
-        if (v?.id == R.id.btn_data_saya){
+        if (v?.id == R.id.LL_btn_data_saya){
             intent = Intent(applicationContext, LihatDataActivity::class.java)
             startActivity(intent)
         }
-        else if (v?.id == R.id.btn_tambah_data){
-            intent = Intent(applicationContext, tambahActivity::class.java)
-            startActivity(intent)
-        }
-        else if (v?.id == R.id.btn_hapus_data){
-            intent = Intent(applicationContext, tambahActivity::class.java)
-            startActivity(intent)
-        }
-        else if (v?.id == R.id.btn_update_data){
+        else if (v?.id == R.id.LL_btn_tambah_data){
             intent = Intent(applicationContext, tambahActivity::class.java)
             startActivity(intent)
         }

@@ -18,10 +18,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="mWareHouse"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:textAlignment="center"
+        android:layout_below="@+id/img_logo"
         android:gravity="center"
-        android:layout_below="@+id/img_logo"/>
+        android:text="mWareHouse"
+        android:textAlignment="center"
+        android:textColor="#009688"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 </RelativeLayout>

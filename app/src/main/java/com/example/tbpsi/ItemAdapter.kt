@@ -26,12 +26,17 @@ class ItemAdapter(private val listItem: ArrayList<Barang>, val mCtx: Context) :
                 ib_edit.setOnClickListener {
                     showUpdateDialog(item)
                 }
+                ib_delete.setOnClickListener{
+                    val dbBrg: DatabaseReference = FirebaseDatabase.getInstance().getReference("barang").child(item.id)
+                    dbBrg.removeValue()
+                    Toast.makeText(mCtx, "Data berhasil dihapus", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }
 
     fun showUpdateDialog(barang: Barang) {
-        val builder = AlertDialog.Builder(mCtx)
+        val builder = AlertDialog.Builder(mCtx, R.style.AlertDialogCustom)
         builder.setTitle("Edit Data")
         val inflater = LayoutInflater.from(mCtx)
         val view = inflater.inflate(R.layout.update_dialog, null)
@@ -80,6 +85,7 @@ class ItemAdapter(private val listItem: ArrayList<Barang>, val mCtx: Context) :
 
             Toast.makeText(mCtx, "Data berhasil di update", Toast.LENGTH_SHORT).show()
         }
+
         builder.setNegativeButton("Cancel") { p0, p1 ->
 
         }

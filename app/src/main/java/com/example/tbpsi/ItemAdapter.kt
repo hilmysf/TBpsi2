@@ -15,20 +15,22 @@ import kotlinx.android.synthetic.main.item_cardview_item.view.*
 class ItemAdapter(private val listItem: ArrayList<Barang>, val mCtx: Context) :
     RecyclerView.Adapter<ItemAdapter.CardViewViewHolder>() {
     internal var items = arrayListOf<Barang>()
+
     inner class CardViewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(item: Barang){
-            with(itemView){
+        fun bind(item: Barang) {
+            with(itemView) {
                 tv_name.text = item.namaBarang
                 tv_brand.text = item.brand
                 tv_stok.text = item.jmlStok.toString()
 
-                ib_edit.setOnClickListener{
+                ib_edit.setOnClickListener {
                     showUpdateDialog(item)
                 }
             }
         }
     }
-    fun showUpdateDialog(barang: Barang ) {
+
+    fun showUpdateDialog(barang: Barang) {
         val builder = AlertDialog.Builder(mCtx)
         builder.setTitle("Edit Data")
         val inflater = LayoutInflater.from(mCtx)
@@ -46,46 +48,48 @@ class ItemAdapter(private val listItem: ArrayList<Barang>, val mCtx: Context) :
         etKategori.setText(barang.kategori)
 
         builder.setView(view)
-        builder.setPositiveButton("Update"){p0,p1->
+        builder.setPositiveButton("Update") { p0, p1 ->
             val dbBrg: DatabaseReference = FirebaseDatabase.getInstance().getReference("barang")
             val namaBarang = etNamaBarang.text.toString().trim()
             val namaBrand = etBrand.text.toString().trim()
             val jmlStok = etJmlStok.text.toString().trim()
             val kategori = etKategori.text.toString().trim()
-            if(namaBarang.isEmpty()){
+            if (namaBarang.isEmpty()) {
                 etNamaBarang.error = "Mohon nama diisi"
                 etNamaBarang.requestFocus()
                 return@setPositiveButton
             }
-            if(namaBrand.isEmpty()){
+            if (namaBrand.isEmpty()) {
                 etBrand.error = "Mohon nama diisi"
                 etBrand.requestFocus()
                 return@setPositiveButton
             }
-            if(jmlStok.isEmpty()){
+            if (jmlStok.isEmpty()) {
                 etJmlStok.error = "Mohon nama diisi"
                 etJmlStok.requestFocus()
                 return@setPositiveButton
             }
-            if(kategori.isEmpty()){
+            if (kategori.isEmpty()) {
                 etKategori.error = "Mohon nama diisi"
                 etKategori.requestFocus()
                 return@setPositiveButton
             }
 
-            val barang = Barang(barang.id, namaBarang,namaBrand,jmlStok.toInt(),kategori)
+            val barang = Barang(barang.id, namaBarang, namaBrand, jmlStok.toInt(), kategori)
             dbBrg.child(barang.id!!).setValue(barang)
 
             Toast.makeText(mCtx, "Data berhasil di update", Toast.LENGTH_SHORT).show()
         }
-        builder.setNegativeButton("No"){p0,p1->
+        builder.setNegativeButton("No") { p0, p1 ->
 
         }
         val alert: AlertDialog = builder.create()
         alert.show()
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewViewHolder {
-        var view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_cardview_item, parent, false)
+        var view: View =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_cardview_item, parent, false)
         return CardViewViewHolder(view)
     }
 

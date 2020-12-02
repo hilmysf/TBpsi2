@@ -6,7 +6,7 @@
     android:id="@+id/LL_btntambah"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".homeActivity" >
+    tools:context=".homeActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,28 +21,28 @@
             android:layout_marginRight="20dp"
             android:background="#FFFFFF">
 
-<!--            <ImageView-->
-<!--                android:id="@+id/iv_house"-->
-<!--                android:layout_width="48dp"-->
-<!--                android:layout_height="48dp"-->
-<!--                app:srcCompat="@drawable/ic_baseline_house_24"></ImageView>-->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/iv_house"-->
+            <!--                android:layout_width="48dp"-->
+            <!--                android:layout_height="48dp"-->
+            <!--                app:srcCompat="@drawable/ic_baseline_house_24"></ImageView>-->
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:src="@drawable/illust_bg"></ImageView>
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_toRightOf="@+id/iv_house"-->
-<!--                android:layout_marginTop="8dp"-->
-<!--                android:text="Dashboard Saya"-->
-<!--                android:textColor="#3A506B"-->
-<!--                android:textSize="20sp"-->
-<!--                android:textStyle="bold">-->
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_toRightOf="@+id/iv_house"-->
+            <!--                android:layout_marginTop="8dp"-->
+            <!--                android:text="Dashboard Saya"-->
+            <!--                android:textColor="#3A506B"-->
+            <!--                android:textSize="20sp"-->
+            <!--                android:textStyle="bold">-->
 
-<!--            </TextView>-->
+            <!--            </TextView>-->
 
         </RelativeLayout>
 

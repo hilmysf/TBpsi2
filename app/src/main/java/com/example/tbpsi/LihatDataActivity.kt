@@ -12,11 +12,6 @@ class LihatDataActivity : AppCompatActivity() {
     private lateinit var adapter: ItemAdapter
     private var items: ArrayList<Barang> = arrayListOf()
 
-    //    private lateinit var dataName: Array<String>
-//    private lateinit var dataId: Array<String>
-//    private lateinit var dataBrand: Array<String>
-//    private lateinit var dataJmlBarang: Array<Int>
-//    private lateinit var dataKategori: Array<String>
     private lateinit var firebaseRef: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

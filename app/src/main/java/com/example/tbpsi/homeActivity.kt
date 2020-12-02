@@ -8,10 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
 class homeActivity : AppCompatActivity(), View.OnClickListener {
-    private lateinit var myData : Button
-    private lateinit var tambahData : Button
-    private lateinit var hapusData : Button
-    private lateinit var updateData : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,11 +20,10 @@ class homeActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
 
-        if (v?.id == R.id.LL_btn_data_saya){
+        if (v?.id == R.id.LL_btn_data_saya) {
             intent = Intent(applicationContext, LihatDataActivity::class.java)
             startActivity(intent)
-        }
-        else if (v?.id == R.id.LL_btn_tambah_data){
+        } else if (v?.id == R.id.LL_btn_tambah_data) {
             intent = Intent(applicationContext, tambahActivity::class.java)
             startActivity(intent)
         }

@@ -23,6 +23,11 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
+                android:src="@drawable/illust_bg"></ImageView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
                 android:src="@drawable/illust_bg" />
 
         </RelativeLayout>

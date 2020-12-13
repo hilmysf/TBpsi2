@@ -26,8 +26,9 @@ class ItemAdapter(private val listItem: ArrayList<Barang>, val mCtx: Context) :
                 ib_edit.setOnClickListener {
                     showUpdateDialog(item)
                 }
-                ib_delete.setOnClickListener{
-                    val dbBrg: DatabaseReference = FirebaseDatabase.getInstance().getReference("barang").child(item.id)
+                ib_delete.setOnClickListener {
+                    val dbBrg: DatabaseReference =
+                        FirebaseDatabase.getInstance().getReference("barang").child(item.id)
                     dbBrg.removeValue()
                     Toast.makeText(mCtx, "Data berhasil dihapus", Toast.LENGTH_SHORT).show()
                 }

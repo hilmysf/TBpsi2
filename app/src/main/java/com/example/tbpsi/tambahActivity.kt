@@ -9,11 +9,11 @@ import android.widget.Toast
 import com.google.firebase.database.FirebaseDatabase
 
 class tambahActivity : AppCompatActivity(), View.OnClickListener {
-    private lateinit var etNamaBarang : EditText
-    private lateinit var etBrand : EditText
-    private lateinit var etJmlStok : EditText
-    private lateinit var etKategori : EditText
-    private lateinit var btnSave : Button
+    private lateinit var etNamaBarang: EditText
+    private lateinit var etBrand: EditText
+    private lateinit var etJmlStok: EditText
+    private lateinit var etKategori: EditText
+    private lateinit var btnSave: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,11 +61,13 @@ class tambahActivity : AppCompatActivity(), View.OnClickListener {
         val barangId = firebaseRef.push().key
         val brg = Barang(barangId!!, namaBarang, brand, jmlStok.toInt(), kategori)
         if (barangId != null) {
-            firebaseRef.child(barangId).setValue(brg).addOnCompleteListener{
-                Toast.makeText(applicationContext, "Data berhasil ditambahkan", Toast.LENGTH_SHORT).show()
+            firebaseRef.child(barangId).setValue(brg).addOnCompleteListener {
+                Toast.makeText(applicationContext, "Data berhasil ditambahkan", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
     }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true

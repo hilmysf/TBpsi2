@@ -7,9 +7,11 @@
     android:layout_gravity="center"
     app:cardCornerRadius="4dp"
     app:cardUseCompatPadding="true">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:background="#3A506B"
         android:padding="8dp">
 
         <ImageView
@@ -29,8 +31,8 @@
             android:layout_marginTop="8dp"
             android:layout_toRightOf="@id/img_item"
             android:text="Nama Item"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tv_brand"
@@ -40,8 +42,8 @@
             android:layout_marginLeft="18dp"
             android:layout_toRightOf="@id/img_item"
             android:text="Brand Item"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tv_stok"
@@ -51,6 +53,7 @@
             android:layout_marginLeft="18dp"
             android:layout_toRightOf="@id/img_item"
             android:text="Jumlah Stock"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
 
